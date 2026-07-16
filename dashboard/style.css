@@ -1,0 +1,200 @@
+/* ---------------- Background ---------------- */
+
+.stApp{
+
+    background:#f5f7fb;
+
+}
+
+/* ---------------- Header ---------------- */
+
+.main-title{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+.sub-title{
+
+    text-align:center;
+
+    color:#64748B;
+
+    font-size:22px;
+
+    margin-bottom:35px;
+
+}
+
+/* ---------------- KPI Cards ---------------- */
+
+.metric-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:0px 6px 20px rgba(0,0,0,0.08);
+
+    text-align:center;
+
+    transition:0.3s;
+
+}
+
+.metric-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ---------------- Feature Cards ---------------- */
+
+.feature-card{
+
+    background:white;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    margin-bottom:15px;
+
+    box-shadow:0px 4px 15px rgba(0,0,0,.08);
+
+}
+
+/* ---------------- Buttons ---------------- */
+
+.stButton>button{
+
+    width:100%;
+
+    border-radius:10px;
+
+    height:50px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+/* ---------------- Sidebar ---------------- */
+
+section[data-testid="stSidebar"]{
+
+    background:#13293D;
+
+}
+
+section[data-testid="stSidebar"] *{
+
+    color:white;
+
+}
+/* ==========================================
+   PREMIUM KPI CARDS
+========================================== */
+
+.kpi-card{
+    background: linear-gradient(135deg,#2563EB,#1D4ED8);
+    color:white;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    text-align:center;
+    transition:.3s;
+    margin-bottom:15px;
+}
+
+.kpi-card:hover{
+    transform:translateY(-6px);
+}
+
+.kpi-value{
+    font-size:34px;
+    font-weight:700;
+}
+
+.kpi-title{
+    font-size:15px;
+    opacity:.9;
+    margin-top:8px;
+}
+
+/* Hero Banner */
+
+.hero{
+    background:linear-gradient(90deg,#0F172A,#1E3A8A);
+    padding:30px;
+    border-radius:20px;
+    color:white;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    margin:0;
+}
+
+.hero p{
+    opacity:.9;
+    font-size:18px;
+}
+/* =====================================
+   INPUT SECTION
+===================================== */
+
+.input-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    margin-bottom:20px;
+
+}
+
+/* Prediction Result */
+
+.result-card{
+
+    background:linear-gradient(135deg,#0F766E,#14B8A6);
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+.result-card h2{
+
+    margin:0;
+
+}
+
+.result-card p{
+
+    font-size:18px;
+
+}
