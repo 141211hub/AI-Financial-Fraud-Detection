@@ -2,7 +2,6 @@ import streamlit as st
 from pathlib import Path
 
 from config import (
-    API_URL,
     PAGE_TITLE,
     PAGE_ICON,
     LAYOUT,
@@ -19,12 +18,11 @@ from pages.history import show as show_history
 from pages.analytics import show as show_analytics
 from pages.explainability import show as show_explainability
 from pages.assistant import show as show_assistant
-from pages.history import show as show_history
-from pathlib import Path
 
 
-
-# ---------------- PAGE CONFIG ---------------- #
+# ======================================================
+# PAGE CONFIG
+# ======================================================
 
 st.set_page_config(
     page_title=PAGE_TITLE,
@@ -33,58 +31,58 @@ st.set_page_config(
     initial_sidebar_state=SIDEBAR_STATE
 )
 
-# ---------------- LOAD CSS ---------------- #
+# ======================================================
+# LOAD CSS
+# ======================================================
 
-css_file = Path(__file__).parent / "style.css"
+BASE_DIR = Path(__file__).resolve().parent
+css_file = BASE_DIR / "assets" / "style.css"
 
-with open(css_file) as f:
-    st.markdown(
-        f"<style>{f.read()}</style>",
-        unsafe_allow_html=True
-    )
+if css_file.exists():
+    with open(css_file, "r", encoding="utf-8") as f:
+        st.markdown(
+            f"<style>{f.read()}</style>",
+            unsafe_allow_html=True
+        )
+else:
+    st.warning(f"CSS file not found: {css_file}")
 
-# ---------------- HEADER ---------------- #
+# ======================================================
+# HEADER
+# ======================================================
 
 show_header()
 
-css_file = Path("assets/style.css")
-
-with open(css_file) as f:
-    st.markdown(
-        f"<style>{f.read()}</style>",
-        unsafe_allow_html=True
-    )
-
-# ---------------- SIDEBAR ---------------- #
+# ======================================================
+# SIDEBAR
+# ======================================================
 
 page = show_sidebar()
 
-# ---------------- ROUTING ---------------- #
+# ======================================================
+# PAGE ROUTING
+# ======================================================
 
 if page == "Home":
-
     show_home()
 
 elif page == "Single Prediction":
-
     show_single_prediction()
 
 elif page == "Batch Prediction":
-
     show_batch_prediction()
 
-elif page == "Analytics":
-
-    show_analytics()
-
 elif page == "History":
-
     show_history()
 
-elif page == "Explainability":
+elif page == "Analytics":
+    show_analytics()
 
+elif page == "Explainability":
     show_explainability()
 
-elif page == "Assistant":
-
+elif page == "AI Assistant":
     show_assistant()
+
+else:
+    show_home()
