@@ -29,3 +29,4 @@ Thumbs.db
 
 # Model cache
 *.pkl
+data/creditcard.csv
