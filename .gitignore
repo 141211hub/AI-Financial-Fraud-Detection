@@ -28,5 +28,4 @@ Thumbs.db
 .pytest_cache/
 
 # Model cache
-*.pkl
 data/creditcard.csv
