@@ -218,19 +218,7 @@ streamlit run app.py
 
 ---
 
-# 📸 Screenshots
 
-Add screenshots here after deployment.
-
-Examples:
-
-- Dashboard Home
-- Fraud Prediction
-- Analytics Page
-- Explainability
-- Batch Prediction
-
----
 
 # 📈 Future Enhancements
 
